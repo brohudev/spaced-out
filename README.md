@@ -111,14 +111,7 @@ This project is licensed MIT! Feel free to fork it, contribute, and make it your
 
 ---
 
-# Stay Spaced Out 🌌
-
-Enjoy your time in the stars, and don’t forget: space is big, but **Spaced Out** is bigger.
-
----
-
-How’s that for a meme-packed, fun README?
-
+- project structure if youre so inclined:
 
 ```├── README.md                  # Project overview and instructions
 ├── LICENSE                    # Project license
