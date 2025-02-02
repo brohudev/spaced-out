@@ -4,7 +4,8 @@
 
 I wanted to learn the languages and also wanted to brag about having my own satellite constellation *simulation*........ so here I am 🙈
 
-> ! This project is still being developed so it most likely wont run if you try to... yet.
+> [!WARNING]
+> This project is still being developed so it most likely wont run if you try to... yet.
 
 ---
 
