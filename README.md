@@ -2,7 +2,9 @@
 
 **Spaced Out** is a satellite constellation simulation that runs on Raspberry Pis (and whatever *other* resource constrained hardware you throw at it). 
 
-I wanted to learn the languages and also wanted to brag about having my own satellite constellation *simulation*........ so here i am 🙈
+I wanted to learn the languages and also wanted to brag about having my own satellite constellation *simulation*........ so here I am 🙈
+
+> ! This project is still being developed so it most likely wont run if you try to... yet.
 
 ---
 
