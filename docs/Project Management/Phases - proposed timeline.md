@@ -1,3 +1,6 @@
+> [!WARN] Todo
+> merge this file into one simple unified timeline
+# proposed timeline:
 ## Priority 1: Foundation (Weeks 1-4)
 ### Individual Satellite State Management
 Priority: HIGHEST
@@ -89,7 +92,24 @@ Minimum features for first working version:
 4. Simple dashboard showing states
 5. Fundamental SDN configuration
 
-Would you like me to:
-6. Detail the testing strategy further?
-7. Expand on the hardware setup?
-8. Break down any specific component in more detail?
+# Phases
+
+### Phase 1: Foundation (Month 1)
+- Basic satellite state management
+- Simple orbital calculations
+- Initial network setup
+
+### Phase 2: Communication (Month 2)
+- Peer-to-peer messaging
+- SDN implementation
+- Basic routing
+
+### Phase 3: Interface (Month 3)
+- Dashboard development
+- Command interface
+- Data logging
+
+### Phase 4: Integration (Month 4)
+- Hardware setup
+- System integration
+- Testing and optimization

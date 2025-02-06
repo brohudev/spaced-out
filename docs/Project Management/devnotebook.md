@@ -8,3 +8,6 @@
    - design of the system (hard and software)
    - a breakdown of the feature list(hard and software)
    - a good definition of the problem statement and what i will do to solve it)
+### 2/5 Wed
+- knocked off a LOT of the docs work and creating scaffolding for the project.
+	- atleast the bones and the skeleton is roughly there.
