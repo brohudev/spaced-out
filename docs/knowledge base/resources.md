@@ -10,3 +10,7 @@
 - https://www.youtube.com/watch?v=RPDzzTFhu8w
 
 
+# meta/knowledge base:
+- adrs:
+	- https://scrum-master.org/en/architecture-decision-record-how-and-why-use-adrs/
+	- https://github.com/joelparkerhenderson/architecture-decision-record?tab=readme-ov-file
