@@ -1,5 +1,5 @@
 # what do i need? 
-- keep track of my project [[knowledge base readme]]
+- keep track of my project.
 	- problem statement and scoped out solution [[scope and feature list]]
 		- phased approach: aka core first the rest later in stages [[Phases - proposed timeline]]
 	- do pm work:
@@ -103,12 +103,10 @@ To develop a ground-based distributed satellite network simulation using Raspber
 - Provides a configurable SDN infrastructure for testing various network topologies
 - Enables research into satellite network protocols and failure modes
 - Creates a scalable platform for future satellite network research
-# [[scope and feature list#Project Scope]]
-- this details the scope of the project, but you can see a brief summary in the callout...
-# [[scope and feature list#Feature List]]
-- this details the list of features implemented in the project with a lot more detail...
-# [[Phases - proposed timeline]]
-- outlines the timeline/phases of the project as outlined by what i project to get done over the next few months...
-- TODO: merge this file into one single simple unified file...
-# [[resources]]
-- should be turned into the index of resources ngl.
+
+![[scope and feature list#Project Scope]]
+
+![[scope and feature list#Feature List]]
+![[Phases - proposed timeline]]
+
+## [[resources]]
