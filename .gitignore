@@ -3,3 +3,5 @@ docs/*/books
 docs/*/papers
 
 **/.obsidian
+
+venv/

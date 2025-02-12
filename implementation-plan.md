@@ -3,6 +3,12 @@
 ## Week 1-2: Asteroid Mapper
 
 - [ ] Set up Python environment with Skyfield
+	- [x] **Ensure Python is installed** (Python 3.8 or later is recommended)
+	- [x] **Create a dedicated project folder** (e.g., `spaced_out_project`)
+	- [x]  **Create a virtual environment** within that folder using Python’s `venv` module
+	- [x]  **Activate the virtual environment** (this ensures your packages don’t interfere with other projects)
+	- [x]  **Install Skyfield and its dependencies** via `pip install skyfield`
+	- [ ]  **Verify the installation** by importing Skyfield in a simple test script
 - [ ] Create CLI tool to fetch asteroid data
 - [ ] Implement asteroid spec calculation (size, orbit, type)
 - [ ] Set up Docker container
