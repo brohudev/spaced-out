@@ -3,3 +3,4 @@ jplephem==2.22
 numpy==2.2.2
 sgp4==2.23
 skyfield==1.49
+pytest==8.0.0
