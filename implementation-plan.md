@@ -8,9 +8,9 @@
 	- [x]  **Create a virtual environment** within that folder using Python’s `venv` module
 	- [x]  **Activate the virtual environment** (this ensures your packages don’t interfere with other projects)
 	- [x]  **Install Skyfield and its dependencies** via `pip install skyfield`
-	- [ ]  **Verify the installation** by importing Skyfield in a simple test script
-- [ ] add testing framework for python
-- [ ] Create CLI tool to fetch asteroid data
+	- [x]  **Verify the installation** by importing Skyfield in a simple test script
+- [x] add testing framework for python
+- [x] Create CLI tool to fetch asteroid data
 - [ ] Implement asteroid spec calculation (size, orbit, type)
 - [ ] Set up Docker container
 - [ ] Deploy to AWS Lambda

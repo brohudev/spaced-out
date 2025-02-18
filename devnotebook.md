@@ -11,3 +11,6 @@
 ### 2/5 Wed
 - knocked off a LOT of the docs work and creating scaffolding for the project.
 	- atleast the bones and the skeleton is roughly there.
+
+### 2/15 Sat
+- added tests
