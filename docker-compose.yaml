@@ -1,0 +1,26 @@
+#todo: change this to match 
+services:
+  backend:
+    build: ./code/backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./code/backend:/app:z
+    working_dir: /app
+    environment:
+      - ENV=development
+    networks:
+      - app_network
+
+  frontend:
+    build: ./code/frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./code/frontend:/app:z
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
