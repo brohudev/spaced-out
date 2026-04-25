@@ -1,59 +1,109 @@
-# Spaced Out: Asteroid Mining Simulator
+# spaced-out
 
-## About the Project
+A tiny Zig-first asteroid mining simulator core.
 
-Spaced Out is an educational asteroid mining simulation project designed to explore the intersection of space technology, resource extraction, and financial modeling. This browser-based application aims to provide insights into the potential future of space-based mining operations.
+The current project is intentionally core-only:
 
-## Project Goals
+- Zig owns the simulation state and rules.
+- There is no browser app, WASM layer, React, database, API, or auth.
+- The CLI entrypoint is only a scripted demo so the core can be built and observed.
+- TUI and GUI work are deferred until the simulation loop is worth visualizing.
+- Asteroid data stays in a small local JSON file for now.
 
-1. Demonstrate real-world applications of orbital mechanics and spectral analysis
-2. Model resource extraction techniques in microgravity environments
-3. Simulate market dynamics for space-derived resources
-4. Explore scalable cloud architecture for complex simulations
+The more ambitious original project context is preserved in `docs/ambitious-project-context.md`. The visualization plan is in `docs/visualization-roadmap.md`.
 
-## Features
+## Project Layout
 
-- **Asteroid Mapping**: Procedurally generate asteroids based on real orbital data
-- **Mining Simulation**: Model optical mining techniques for resource extraction
-- **Economic Model**: Implement dynamic pricing based on supply and demand
-- **User Interface**: Visualize mining operations and market trends
+```text
+spaced-out/
+  README.md
+  .gitignore
+  build.sh
+  data/
+    asteroids.json
+  docs/
+    ambitious-project-context.md
+    visualization-roadmap.md
+  zig/
+    src/
+      main.zig
+      sim.zig
+    build.zig
+```
 
-## How It Works
+`zig/src/sim.zig` is the main place to work. `zig/src/main.zig` is only a small runner that demonstrates the current simulation functions.
 
-1. Select an asteroid from a map based on real astronomical data
-2. Deploy virtual mining operations to extract resources
-3. Monitor market fluctuations and sell extracted materials
-4. Reinvest profits to improve mining efficiency
+## Install Zig
 
-## Tech Stack
+If `zig version` works, you can skip this section.
 
-- **Backend**: Python (NumPy, Skyfield), Go (performance-critical calculations), FastAPI
-- **Frontend**: Next with D3.js for data visualization
-- **Hosting**: AWS Lambda, S3, RDS/PostgreSQL
-- **Data Sources**: NASA JPL Small-Body Database, London Metal Exchange API
+Install Zig from the official downloads page:
 
-## Core Components
+<https://ziglang.org/download/>
 
-| Component | Purpose | Data Source |
-|-----------|---------|-------------|
-| Asteroid Generator | Create realistic asteroid models | NASA JPL orbits |
-| Mining Simulator | Calculate resource extraction rates | Spectral data |
-| Market Model | Simulate price dynamics | LME data, Monte Carlo simulations |
-| Orbital Mechanics | Compute delta-V and trajectories | Skyfield ephemeris |
+On Linux, the basic flow is:
 
-## Development Timeline
+```sh
+tar -xf zig-linux-*.tar.xz
+sudo mv zig-linux-* /opt/zig
+sudo ln -s /opt/zig/zig /usr/local/bin/zig
+zig version
+```
 
-1. **Weeks 1-2**: Implement asteroid mapping and data retrieval
-2. **Weeks 3-4**: Develop mining simulation and resource tracking
-3. **Weeks 5-6**: Create economic model and market interface
-4. **Weeks 7-8**: Build API layer and integrate components
+Package managers may also provide Zig, but the official tarball is usually the most current.
 
-## Note on Realism
+## Build The Core
 
-While Spaced Out uses real astronomical data and economic principles, it is primarily an educational tool and not a precise representation of actual asteroid mining operations. The project simplifies complex concepts for the purpose of learning and exploration.
+From the project root:
 
-## Contributions
+```sh
+./build.sh
+```
 
-This project is currently a personal educational endeavor. However, feedback, suggestions, and discussions are welcome through the Issues section.
+This compiles the native Zig executable to:
 
-Remember: My goal is to learn, explore, and have a bit of fun along the way. No actual asteroids were harmed in the making of this simulator.
+```text
+zig/zig-out/bin/spaced_out
+```
+
+You can also build directly from the Zig package:
+
+```sh
+cd zig
+zig build
+```
+
+## Run The Demo
+
+From the project root:
+
+```sh
+cd zig
+zig build run
+```
+
+The output is intentionally plain text. It is not meant to be the final interface.
+
+## Where To Start Editing
+
+Start with `zig/src/sim.zig`.
+
+The current simulation functions are deliberately small:
+
+- `selectAsteroid(index: u32)`
+- `mine()`
+- `sell()`
+- `buyUpgrade()`
+- `nextTurn()`
+- `statusText(status: StatusCode)`
+
+Keep UI concerns out of `sim.zig`. The next UI should call the core rather than own the game rules.
+
+## Next Steps
+
+1. Flesh out the Zig simulation state.
+2. Implement the mine/sell loop.
+3. Add upgrade math.
+4. Add tests for core rules.
+5. Add a TUI after the core becomes hard to inspect with plain CLI output.
+6. Consider a GUI only after the TUI proves what needs richer visualization.
