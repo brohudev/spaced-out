@@ -7,7 +7,5 @@ const std = @import("std");
 const spacedout = @import("spacedout");
 
 pub fn main() !void {
-    const stdout = std.io.getStdOut().writer();
-
-    try stdout.print("{s}\n", .{spacedout.message});
+    std.debug.print("{s}\n", .{spacedout.message});
 }
