@@ -1,3 +1,6 @@
+# This project has been abandoned. 
+I have since moved all of my work to a cleaner repo name and structure where I am doing this work from the ground up in zig without using llms to code anything.
+
 # spaced-out
 
 A tiny Zig-first asteroid mining simulator core.
